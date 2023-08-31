@@ -3,15 +3,45 @@
     <ion-title>
       <p align="center">Compromisso</p>
     </ion-title>
+
   </ion-toolbar>
+ 
 </ion-header>
+<ion-item>
+
+  <ion-input label="Text input" placeholder="Enter text"></ion-input>
+  <ion-input label="Number input" type="number" placeholder="000"></ion-input>
+  <ion-input label="Password input" type="password" value="password"></ion-input>
+  <ion-input label="Email input" type="email" placeholder="email@domain.com"></ion-input>
+  <ion-input label="Telephone input" type="tel" placeholder="888-888-8888"></ion-input>
+ 
+</ion-item>
 
 <ion-content [fullscreen]="true">
+
   <ion-fab slot="fixed" vertical="top" horizontal="end" [edge]="true">
-    <ion-fab-button>
+    <ion-fab-button routerLink="/cadastro">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+
+<!-- <ion-toolbar>
+  <ion-buttons slot="secondary">
+    <ion-button>
+      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button>
+      <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Icon Buttons</ion-title>
+</ion-toolbar> -->
+
 
   <ion-header collapse="condense">
     <ion-toolbar>

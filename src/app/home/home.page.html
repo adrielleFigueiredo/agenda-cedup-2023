@@ -8,12 +8,7 @@
  
 </ion-header>
 <ion-item>
-
-  <ion-input label="Text input" placeholder="Enter text"></ion-input>
-  <ion-input label="Number input" type="number" placeholder="000"></ion-input>
-  <ion-input label="Password input" type="password" value="password"></ion-input>
-  <ion-input label="Email input" type="email" placeholder="email@domain.com"></ion-input>
-  <ion-input label="Telephone input" type="tel" placeholder="888-888-8888"></ion-input>
+  
  
 </ion-item>
 
@@ -50,44 +45,27 @@
   </ion-header>
 
 
-  <ion-card>
+  <ion-card *ngFor="let compromisso of compromissos;let i = index;">
     <ion-card-header>
-      <ion-card-title>Matemática</ion-card-title>
-      <ion-card-subtitle>ENTREGAR TRABALHAR SOBRE TRIGNOMETRIA</ion-card-subtitle>
+      <ion-card-title>{{compromisso.materia}}</ion-card-title>
+      <ion-card-subtitle>{{compromisso.descricao}}.</ion-card-subtitle>
     </ion-card-header>
   
     <ion-card-content>
       <ion-item>
         <ion-icon name="alarm"></ion-icon>
-        <ion-input label="" placeholder="Enter text"></ion-input>
+        <ion-input label="" placeholder="Alarme"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-icon name="calendar"></ion-icon>
-        <ion-input label="" placeholder="Enter text"></ion-input>
+        <ion-input label="" placeholder="Calendario"></ion-input>
       </ion-item>
-                 
+      <ion-item>
+      <ion-button expand="full" (click)="excluir(i)">Encerrado</ion-button> 
+      </ion-item>           
     </ion-card-content>
 
   </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Português</ion-card-title>
-      <ion-card-subtitle>PROVA SOBRE PRONOME PESSOAL DO CASO RETO</ion-card-subtitle>
-    </ion-card-header>
   
-    <ion-card-content>
-      <ion-item>
-        <ion-icon name="alarm"></ion-icon>
-        <ion-input label="" placeholder="Enter text"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-icon name="calendar"></ion-icon>
-        <ion-input label="" placeholder="Enter text"></ion-input>
-      </ion-item>
-                 
-    </ion-card-content>
-
-  </ion-card>
 </ion-content>

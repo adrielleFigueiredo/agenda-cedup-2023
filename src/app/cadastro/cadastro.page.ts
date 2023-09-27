@@ -23,6 +23,7 @@ export class CadastroPage implements OnInit {
     let compromisso ={
       materia:this.materia,
       descricao:this.descricao
+      datahora:this.datahora
     };
     this.localstorage_service.post('compromisso',compromisso);
     alert('Salvo com sucesso!');

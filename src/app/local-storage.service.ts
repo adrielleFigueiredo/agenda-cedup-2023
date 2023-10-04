@@ -18,4 +18,10 @@ post(entidade:string,dados:any){
     return JSON.parse(String(localStorage.getItem(entidade)));
 
   }
+  del(entidade:string,indice:number){
+    this.dados$.splice(indice,1);
+localStorage.setItem(entidade,JSON.stringify(this.dados$));
+
+
+  }
 }

@@ -12,11 +12,18 @@ export class HomePage {
   constructor(
     public localstorage_service:LocalStorageService
   ) {
+ 
+
+  }
+  ionViewWillEnter(){
     this.compromissos = this.localstorage_service.get("compromisso");
+
+
 
   }
 excluir(indice:number){
 this.compromissos.splice(indice,1);
+this.localstorage_service.del('compromisso',indice);
 }
 getHora(data:string){
 let hora=data.split("T")[1];

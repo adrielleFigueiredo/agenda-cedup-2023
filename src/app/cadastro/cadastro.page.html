@@ -13,10 +13,11 @@
       <ion-title size="large">Agendar</ion-title>
     </ion-toolbar>
   </ion-header>
+
   <ion-list lines="full">
-    <ion-item>
+    <ion-item #obrigatorio>
       <ion-label>Materia</ion-label>
-      <ion-input [(ngModel)]="materia" ></ion-input>
+      <ion-input [(ngModel)]="materia" required></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Descricao</ion-label>
@@ -25,9 +26,12 @@
     <ion-item>
      
       <ion-datetime
-        [showDefaultButtons]="true"
+      #calendario
+      locate="pt-BR"
+        [showDefaultButtons]="false"
         [(ngModel)]="datahora"
     ></ion-datetime>
+
     </ion-item>
   </ion-list>
   <ion-button expand="full" (click)="salvar()">salvar</ion-button>

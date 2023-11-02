@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class LocalStorageService {
   public dados$:Array<any> =[];
-
   constructor() { }
 
 post(entidade:string,dados:any){
@@ -15,7 +14,8 @@ post(entidade:string,dados:any){
 
   }
   get(entidade:string){
-    return JSON.parse(String(localStorage.getItem(entidade)));
+  let _dados =JSON.parse(String(localStorage.getItem(entidade)));
+  return(_dados == null) ? [] :_dados;
 
   }
   del(entidade:string,indice:number){
